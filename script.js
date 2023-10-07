@@ -214,3 +214,15 @@ allBooks.addEventListener('click', () => {
   showBookList(books);
 });
 
+dropDownFilter.addEventListener('change', () => {
+  const dropDownValue = dropDownFilter.value;
+  if (dropDownValue === 'newToOld') {
+    books.sort((a, b) => b.year - a.year);
+  } else if (dropDownValue === 'oldToNew') {
+    books.sort((a, b) => a.year - b.year);
+  } else if (dropDownValue === 'rating') {
+    books.sort((a, b) => b.rating - a.rating);
+  }
+  showBookList(books);
+});
+
