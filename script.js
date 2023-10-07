@@ -226,3 +226,12 @@ dropDownFilter.addEventListener('change', () => {
   showBookList(books);
 });
 
+dropDownGenre.addEventListener('change', () => {
+  const dropDownGenreValue = dropDownGenre.value;
+  const genreFilter = books.filter(
+    /* make book.genre and dropDownGenreValue to lower case so they can match! otherwise it dont filter! */
+    (book) => book.genre.toLowerCase() === dropDownGenreValue.toLowerCase()
+  );
+
+  showBookList(genreFilter);
+});
