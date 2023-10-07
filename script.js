@@ -209,3 +209,8 @@ const showBookList = (books) => {
 };
 
 showBookList(books);
+
+allBooks.addEventListener('click', () => {
+  showBookList(books);
+});
+
