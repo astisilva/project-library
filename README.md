@@ -16,4 +16,4 @@ Describe how you approached to problem, and what tools and techniques you used t
 
 # View it Live
 
--I have deploy it to Netlify
+- I have deploy it to Netlify
