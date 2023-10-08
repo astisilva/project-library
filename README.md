@@ -12,7 +12,7 @@ Describe how you approached to problem, and what tools and techniques you used t
 
 - I realized the case sensivity was important to make it match.
 
-- When I got stuck I googled the problem
+- When I got stuck I Googled the problem
 
 # View it Live
 
