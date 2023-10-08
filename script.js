@@ -199,8 +199,9 @@ const showBookList = (books) => {
           <div class='text-content'>
             <h4>${book.title}</h4>
             <p>Author: ${book.author}</p>
-            <p>Year: ${book.year}</p>
+            <p>Year: ${book.year}</p>            
             <p>Rating: ${book.rating}</p>
+            <p>Genre: ${book.genre}</p>
           </div>
           <img src='${book.image}' alt='${book.title} Image'>
         </div>
@@ -228,10 +229,7 @@ dropDownFilter.addEventListener('change', () => {
 
 dropDownGenre.addEventListener('change', () => {
   const dropDownGenreValue = dropDownGenre.value;
-  const genreFilter = books.filter(
-    /* make book.genre and dropDownGenreValue to lower case so they can match! otherwise it dont filter! */
-    (book) => book.genre.toLowerCase() === dropDownGenreValue.toLowerCase()
-  );
+  const genreFilter = books.filter((book) => book.genre === dropDownGenreValue);
 
   showBookList(genreFilter);
 });
