@@ -16,7 +16,7 @@ h1 {
  
 }
 
-button {
+#allBooks, #searchButton {
   padding: 10px 20px;
   border-radius: 8px;
   font-size: 16px;
@@ -25,6 +25,15 @@ button {
   color: #fff;
   background-color:#a881af;
 }
+
+
+#searchBar {
+  padding: 10px;
+  width: 200px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
 
 label {
   margin-bottom: 10px; 
@@ -79,3 +88,6 @@ p {
   height: 200px; 
   object-fit: cover;
 }
+
+
+

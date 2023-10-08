@@ -189,6 +189,8 @@ const container = document.getElementById('container');
 const allBooks = document.getElementById('allBooks');
 const dropDownFilter = document.getElementById('dropDownFilter');
 const dropDownGenre = document.getElementById('dropDownGenre');
+const searchBar = document.getElementById('searchBar');
+const SearchButton = document.getElementById('searchButton');
 
 const showBookList = (books) => {
   container.innerHTML = '';
@@ -228,8 +230,25 @@ dropDownFilter.addEventListener('change', () => {
 });
 
 dropDownGenre.addEventListener('change', () => {
-  const dropDownGenreValue = dropDownGenre.value;
-  const genreFilter = books.filter((book) => book.genre === dropDownGenreValue);
-
+  //toLowerCase() to ensure that the values match
+  const dropDownGenreValue = dropDownGenre.value.toLowerCase();
+  const genreFilter = books.filter((book) => book.genre.toLowerCase() === dropDownGenreValue);
+  //Show the genre filtered books
   showBookList(genreFilter);
+});
+
+SearchButton.addEventListener('click', () => {
+  //toLowerCase to make it match the searchFilter
+  const searchValue = searchBar.value.toLowerCase();
+  // Filter books based on the search value
+  const searchFilter = books.filter(
+    (book) =>
+      book.title.toLowerCase().includes(searchValue) ||
+      book.author.toLowerCase().includes(searchValue) ||
+      book.genre.toLowerCase().includes(searchValue)
+    // toLowerCase to match the searchValue
+  );
+
+  // Show the searched books
+  showBookList(searchFilter);
 });
