@@ -204,6 +204,7 @@ const showBookList = (books) => {
             <p>Year: ${book.year}</p>            
             <p>Rating: ${book.rating}</p>
             <p>Genre: ${book.genre}</p>
+            <p>Description: ${book.description}</p>
           </div>
           <img src='${book.image}' alt='${book.title} Image'>
         </div>
